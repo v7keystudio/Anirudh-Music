@@ -325,7 +325,7 @@ If you are the rights holder of any asset used in this project and have concerns
 
 Anirudh-Music
 
-Made with ❤️ by [V7KEYSTUDIO](https://portfolio.v7keystudio.workers.app).
+Made with ❤️ by [V7KEYSTUDIO](https://portfolio.v7keystudio.workers.dev).
 
 ⭐ If you enjoyed the experience, consider starring the repository.
 
