@@ -1,4 +1,4 @@
-🎵 Anirudh-Music
+##🎵 Anirudh-Music
 
 The Sound Behind Modern Indian Cinema.
 
@@ -232,12 +232,13 @@ For the best development experience, use VS Code + Live Server.
 
 ---
 
-🌐 Live Demo
 
-## 🚀 Live Preview
+[## 🚀 Live Preview](https://v7keystudio.github.io/Anirudh-Music/).
 
 
-[🔴 Live Preview](https://YOUR-LIVE-LINK-HERE.com)
+[🔴 Live Preview](https://v7keystudio.github.io/Anirudh-Music/)
+
+---
 
 🎯 Project Goals
 
@@ -324,7 +325,7 @@ If you are the rights holder of any asset used in this project and have concerns
 
 Anirudh-Music
 
-Made with ❤️ by V7KEYSTUDIO
+Made with ❤️ by [V7KEYSTUDIO](https://portfolio.v7keystudio.workers.app).
 
 ⭐ If you enjoyed the experience, consider starring the repository.
 
