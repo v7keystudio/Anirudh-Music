@@ -234,11 +234,10 @@ For the best development experience, use VS Code + Live Server.
 
 🌐 Live Demo
 
-«Add your deployed website link here after deploying the project.»
+## 🚀 Live Preview
 
-https://your-live-demo-url.com
 
----
+[🔴 Live Preview](https://YOUR-LIVE-LINK-HERE.com)
 
 🎯 Project Goals
 
