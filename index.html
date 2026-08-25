@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Anirudh Ravichander — The Sound Behind Modern Indian Cinema</title>
+<meta name="description" content="An unofficial cinematic fan tribute to composer Anirudh Ravichander — discography, hall of fame songs, timeline, awards, collaborations and gallery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOKENS
+=============================================================== */
+:root{
+  --bg-0:#07060a;
+  --bg-1:#0c0a10;
+  --bg-2:#121017;
+  --ink-0:#f3efe7;
+  --ink-1:#cfc8ba;
+  --ink-2:#8b8478;
+  --gold-0:#e9c373;
+  --gold-1:#c79a4a;
+  --gold-2:#7a5c24;
+  --ember:#c1502e;
+  --glass-fill: rgba(255,255,255,0.045);
+  --glass-fill-strong: rgba(255,255,255,0.08);
+  --glass-border: rgba(255,255,255,0.10);
+  --glass-border-soft: rgba(255,255,255,0.06);
+  --shadow-deep: 0 30px 80px -20px rgba(0,0,0,0.7);
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --ease-in-out: cubic-bezier(.65,0,.35,1);
+  --display: "Fraunces", serif;
+  --body: "Inter", sans-serif;
+  --mono: "JetBrains Mono", monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:auto;}
+::selection{ background: var(--gold-1); color:#0a0a0a; }
+body{
+  background: radial-gradient(120% 90% at 50% -10%, #1a141a 0%, var(--bg-0) 55%, #050407 100%);
+  color: var(--ink-0);
+  font-family: var(--body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  cursor:none;
+}
+img{max-width:100%;display:block; object-fit: cover;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;border:none;background:none;color:inherit;cursor:none;}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;}
+@media(max-width:680px){.wrap{padding:0 20px;}}
+
+h1,h2,h3,h4{font-family:var(--display);font-weight:500;letter-spacing:-0.01em;}
+.eyebrow{
+  font-family:var(--mono); font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+  color: var(--gold-1); display:flex; align-items:center; gap:10px; margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:linear-gradient(90deg,var(--gold-1),transparent);}
+
+/* ============================================================
+   CUSTOM CURSOR
+=============================================================== */
+.cursor-dot, .cursor-ring{
+  position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
+  border-radius:50%; transform:translate(-50%,-50%);
+}
+.cursor-dot{ width:6px;height:6px;background:var(--gold-0); }
+.cursor-ring{
+  width:34px;height:34px;border:1px solid rgba(233,195,115,.5);
+  transition: width .25s var(--ease-out), height .25s var(--ease-out), border-color .25s, background .25s, opacity .25s;
+}
+.cursor-ring.is-active{ width:60px;height:60px; background:rgba(233,195,115,.08); border-color:var(--gold-0); }
+@media(max-width:900px){ .cursor-dot,.cursor-ring{display:none;} body{cursor:auto;} button,a{cursor:pointer;} }
+
+/* ============================================================
+   LOADER
+=============================================================== */
+#loader{
+  position:fixed; inset:0; z-index:10000; background:var(--bg-0);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px;
+  transition: opacity 1s var(--ease-in-out), visibility 1s;
+}
+#loader.hidden{ opacity:0; visibility:hidden; }
+.loader-mark{ font-family:var(--display); font-size:13px; letter-spacing:.5em; color:var(--ink-2); text-transform:uppercase; }
+.loader-wave{ display:flex; align-items:flex-end; gap:5px; height:46px; }
+.loader-wave span{
+  width:4px; background:linear-gradient(180deg,var(--gold-0),var(--gold-2));
+  border-radius:3px; animation: wave 1.1s ease-in-out infinite;
+}
+.loader-wave span:nth-child(1){height:18%;animation-delay:-1.1s;}
+.loader-wave span:nth-child(2){height:55%;animation-delay:-0.9s;}
+.loader-wave span:nth-child(3){height:90%;animation-delay:-0.7s;}
+.loader-wave span:nth-child(4){height:40%;animation-delay:-0.5s;}
+.loader-wave span:nth-child(5){height:75%;animation-delay:-0.3s;}
+.loader-wave span:nth-child(6){height:30%;animation-delay:-0.1s;}
+.loader-wave span:nth-child(7){height:60%;animation-delay:-0.2s;}
+@keyframes wave{ 0%,100%{transform:scaleY(.3);} 50%{transform:scaleY(1);} }
+.loader-pct{font-family:var(--mono);font-size:11px;color:var(--gold-1);letter-spacing:.15em;}
+
+/* ============================================================
+   PROGRESS BAR
+=============================================================== */
+#scroll-progress{
+  position:fixed; top:0; left:0; height:2px; width:0%; z-index:9998;
+  background:linear-gradient(90deg,var(--ember),var(--gold-0));
+  box-shadow:0 0 14px rgba(233,195,115,.6);
+}
+
+/* ============================================================
+   BACKGROUND AMBIENCE
+=============================================================== */
+.bg-orb{ position:fixed; border-radius:50%; filter:blur(110px); pointer-events:none; z-index:0; opacity:.35; }
+.bg-orb.one{ width:520px;height:520px; top:-10%; left:-10%; background:radial-gradient(circle,#5a3a14,transparent 70%); }
+.bg-orb.two{ width:600px;height:600px; bottom:0%; right:-15%; background:radial-gradient(circle,#3a1c12,transparent 70%); }
+.mouse-glow{
+  position:fixed; width:420px;height:420px; border-radius:50%; pointer-events:none; z-index:1;
+  background:radial-gradient(circle, rgba(233,195,115,.06), transparent 65%);
+  transform:translate(-50%,-50%); transition:opacity .4s; mix-blend-mode:screen;
+}
+.grain{ position:fixed; inset:0; z-index:2; pointer-events:none; opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* ============================================================
+   NAVIGATION — LIQUID GLASS PILL
+=============================================================== */
+.nav-shell{
+  position:fixed; top:18px; left:50%; transform:translate(-50%,0); z-index:1000;
+  width:min(94vw,980px);
+  transition: top .5s var(--ease-out);
+}
+.nav-shell.nav-hidden{ top:-90px; }
+.nav-inner{
+  display:flex; align-items:center; justify-content:space-between; gap:18px;
+  padding:10px 12px 10px 22px; border-radius:100px;
+  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border:1px solid var(--glass-border);
+  box-shadow: 0 20px 50px -18px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.nav-logo{ font-family:var(--display); font-size:16px; letter-spacing:.18em; font-weight:600;
+  background:linear-gradient(120deg,#fff,var(--gold-0) 60%,var(--ink-2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.nav-links{ display:flex; align-items:center; gap:2px; }
+.nav-links a{
+  position:relative; padding:9px 14px; font-size:12.5px; font-weight:500; color:var(--ink-1);
+  border-radius:100px; transition: color .3s; letter-spacing:.01em;
+}
+.nav-links a:hover{ color:var(--ink-0); }
+.nav-links a.active{ color:var(--bg-0); }
+.nav-pill-bg{
+  position:absolute; top:6px; height:calc(100% - 12px); border-radius:100px;
+  background:linear-gradient(120deg,var(--gold-0),var(--gold-1));
+  transition: left .45s var(--ease-out), width .45s var(--ease-out); z-index:-1;
+}
+.nav-cta{
+  display:flex; align-items:center; gap:6px; padding:9px 18px; border-radius:100px; font-size:12px; font-weight:600;
+  background:rgba(255,255,255,.06); border:1px solid var(--glass-border); white-space:nowrap;
+  transition: background .3s, border-color .3s;
+}
+.nav-cta:hover{ background:rgba(255,255,255,.12); border-color:rgba(233,195,115,.4); }
+.nav-burger{ display:none; width:36px;height:36px; align-items:center; justify-content:center; }
+.nav-burger span{ display:block; width:16px;height:1.4px; background:var(--ink-0); position:relative; }
+.nav-burger span::before,.nav-burger span::after{content:"";position:absolute;left:0;width:16px;height:1.4px;background:var(--ink-0);}
+.nav-burger span::before{top:-5px;} .nav-burger span::after{top:5px;}
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .nav-cta{display:none;}
+  .nav-burger{display:flex;}
+}
+.nav-mobile{
+  position:fixed; inset:0; z-index:1100; background:rgba(7,6,10,.92); backdrop-filter:blur(20px);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;
+  opacity:0; visibility:hidden; transition:opacity .4s, visibility .4s;
+}
+.nav-mobile.open{opacity:1;visibility:visible;}
+.nav-mobile a{font-family:var(--display); font-size:30px; padding:14px; color:var(--ink-1);}
+.nav-mobile a:hover{color:var(--gold-0);}
+.nav-mobile-close{position:absolute; top:28px; right:28px; font-size:13px; letter-spacing:.2em; color:var(--ink-2);}
+
+/* ============================================================
+   SECTION SCAFFOLD
+=============================================================== */
+section{ position:relative; z-index:2; padding:160px 0; }
+@media(max-width:768px){ section{ padding:110px 0; } }
+.section-head{ max-width:640px; margin-bottom:64px; }
+.section-head h2{ font-size:clamp(34px,5vw,56px); line-height:1.05; color:var(--ink-0); }
+.section-head h2 em{ font-style:italic; color:var(--gold-0); font-weight:400; }
+.section-head p{ margin-top:18px; color:var(--ink-1); font-size:16px; line-height:1.7; max-width:520px; }
+
+.reveal{ opacity:0; transform:translateY(36px); }
+
+/* ============================================================
+   HERO
+=============================================================== */
+.hero{ min-height:100vh; display:flex; align-items:center; padding-top:140px; position:relative; overflow:hidden; }
+.hero-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center; }
+@media(max-width:980px){ .hero-grid{ grid-template-columns:1fr; gap:50px; } }
+
+.hero-kicker{ font-family:var(--mono); font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-1); margin-bottom:26px; display:flex; align-items:center; gap:12px;}
+.hero-kicker .eq{display:flex;align-items:flex-end;gap:2px;height:12px;}
+.hero-kicker .eq span{width:2px;background:var(--gold-1);animation:wave 1s ease-in-out infinite;}
+.hero-kicker .eq span:nth-child(1){animation-delay:-.8s;height:40%;}
+.hero-kicker .eq span:nth-child(2){animation-delay:-.5s;height:100%;}
+.hero-kicker .eq span:nth-child(3){animation-delay:-.2s;height:60%;}
+
+.hero h1{
+  font-size:clamp(46px,8.2vw,108px); line-height:.94; letter-spacing:-0.02em; font-weight:500;
+  color:var(--ink-0);
+}
+.hero h1 span{ display:block; overflow:hidden; }
+.hero h1 .line-inner{ display:block; }
+.hero h1 em{ font-style:italic; font-weight:300; color:transparent;
+  -webkit-text-stroke:1px var(--gold-0); }
+
+.hero-sub{
+  margin-top:30px; font-size:18px; color:var(--ink-1); max-width:460px; line-height:1.6; font-weight:300;
+}
+.hero-sub .accent{color:var(--gold-0); font-style:italic; font-family:var(--display);}
+
+.hero-bio{ margin-top:26px; font-size:14.5px; line-height:1.85; color:var(--ink-2); max-width:480px; }
+
+.hero-actions{ display:flex; gap:14px; margin-top:42px; flex-wrap:wrap; }
+.btn{
+  position:relative; overflow:hidden; padding:15px 30px; border-radius:100px; font-size:13px; font-weight:600;
+  letter-spacing:.03em; display:inline-flex; align-items:center; gap:10px; transition: transform .35s var(--ease-out);
+}
+.btn-gold{ background:linear-gradient(120deg,var(--gold-0),var(--gold-1)); color:#1a1206; }
+.btn-gold:hover{ transform:translateY(-2px); }
+.btn-ghost{
+  background:rgba(255,255,255,.04); border:1px solid var(--glass-border); color:var(--ink-0);
+  backdrop-filter:blur(10px);
+}
+.btn-ghost:hover{ background:rgba(255,255,255,.08); transform:translateY(-2px); }
+.ripple{ position:absolute; border-radius:50%; background:rgba(255,255,255,.5); transform:scale(0); animation:rip .65s ease-out; pointer-events:none; }
+@keyframes rip{ to{ transform:scale(3.2); opacity:0; } }
+
+/* HERO PORTRAIT UPDATED WITH IMAGE */
+.hero-portrait{ position:relative; aspect-ratio:4/5; border-radius:28px; overflow:hidden;
+  border:1px solid var(--glass-border); box-shadow:var(--shadow-deep);
+}
+.hero-portrait img{ width:100%; height:100%; object-fit:cover; display:block; position:absolute; inset:0; }
+.hero-portrait-art{
+  position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:
+    radial-gradient(120% 90% at 30% 0%, rgba(233,195,115,.15), transparent 55%),
+    linear-gradient(0deg, rgba(7,6,10,0.9) 0%, rgba(7,6,10,0.2) 50%, transparent 100%);
+}
+.hero-portrait-rings{ position:absolute; inset:0; z-index:2; display:flex; align-items:center; justify-content:center; pointer-events:none; }
+.hero-portrait-rings svg{ width:78%; opacity:.5; animation:spin 60s linear infinite; }
+@keyframes spin{ to{transform:rotate(360deg);} }
+.hero-portrait-mono{
+  position:absolute; bottom:0; left:0; right:0; padding:30px 28px 26px; z-index:3;
+  display:flex; justify-content:space-between; align-items:flex-end;
+}
+.hero-portrait-mono .role{ font-family:var(--mono); font-size:10px; color:var(--gold-1); letter-spacing:.15em; text-transform:uppercase; margin-top:4px;}
+.hero-portrait-frame{ position:absolute; inset:14px; border:1px solid rgba(255,255,255,.12); border-radius:18px; pointer-events:none; z-index:2;}
+.particle{ position:absolute; border-radius:50%; background:var(--gold-0); opacity:0; pointer-events:none; filter:blur(.5px); z-index:2; }
+
+.hero-scroll{
+  position:absolute; left:50%; bottom:26px; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:10px; color:var(--ink-2);
+}
+.hero-scroll .line{ width:1px; height:46px; background:linear-gradient(180deg,var(--gold-1),transparent); position:relative; overflow:hidden;}
+.hero-scroll .line::after{ content:""; position:absolute; top:-46px; left:0; width:100%; height:46px; background:linear-gradient(180deg,transparent,var(--gold-0)); animation:scrolldrop 2s ease-in-out infinite; }
+@keyframes scrolldrop{ to{ top:46px; } }
+.hero-scroll span{ font-family:var(--mono); font-size:9.5px; letter-spacing:.25em; text-transform:uppercase; }
+
+/* ============================================================
+   GLASS CARD BASE
+=============================================================== */
+.glass{
+  background: linear-gradient(160deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  backdrop-filter: blur(18px) saturate(140%); -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border:1px solid var(--glass-border-soft);
+  box-shadow: 0 24px 60px -28px rgba(0,0,0,.65), inset 0 1px 0 rgba(255,255,255,.06);
+  border-radius:22px;
+}
+.glass:hover{ border-color: rgba(233,195,115,.28); }
+
+/* ============================================================
+   ABOUT
+=============================================================== */
+.about-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:50px; }
+@media(max-width:900px){ .about-grid{ grid-template-columns:1fr; } }
+.about-quote{ padding:36px; }
+.about-quote p{ font-family:var(--display); font-size:24px; line-height:1.45; color:var(--ink-0); font-style:italic; font-weight:400; }
+.about-quote .sig{ margin-top:22px; font-family:var(--mono); font-size:11px; color:var(--gold-1); letter-spacing:.1em; }
+
+.about-list{ display:flex; flex-direction:column; }
+.about-row{
+  display:grid; grid-template-columns:130px 1fr; gap:24px; padding:24px 0;
+  border-bottom:1px solid var(--glass-border-soft);
+}
+.about-row:first-child{ padding-top:0; }
+.about-row .k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-1); padding-top:3px; }
+.about-row .v{ font-size:15.5px; color:var(--ink-1); line-height:1.7; }
+.about-row .v b{ color:var(--ink-0); font-weight:600; }
+
+/* ============================================================
+   TIMELINE
+=============================================================== */
+.timeline{ position:relative; }
+.timeline-track{ position:relative; padding-left:40px; }
+.timeline-spine{ position:absolute; left:9px; top:0; bottom:0; width:1px; background:linear-gradient(180deg, transparent, var(--glass-border) 6%, var(--glass-border) 94%, transparent); }
+.timeline-spine-fill{ position:absolute; left:9px; top:0; width:1px; height:0%; background:linear-gradient(180deg,var(--gold-0),var(--ember)); box-shadow:0 0 12px rgba(233,195,115,.6); }
+.tl-item{ position:relative; padding:0 0 64px 36px; }
+.tl-item:last-child{ padding-bottom:0; }
+.tl-dot{
+  position:absolute; left:-40px; top:4px; width:19px;height:19px; border-radius:50%;
+  background:var(--bg-1); border:1px solid var(--glass-border); display:flex; align-items:center; justify-content:center;
+  transition: border-color .4s, background .4s;
+}
+.tl-dot::after{ content:""; width:7px;height:7px;border-radius:50%; background:var(--ink-2); transition:background .4s, box-shadow .4s; }
+.tl-item.in-view .tl-dot{ border-color:var(--gold-0); }
+.tl-item.in-view .tl-dot::after{ background:var(--gold-0); box-shadow:0 0 14px rgba(233,195,115,.8); }
+.tl-year{ font-family:var(--display); font-size:46px; color:var(--ink-2); line-height:1; transition:color .5s; }
+.tl-item.in-view .tl-year{ color:var(--gold-0); }
+.tl-content{ display:flex; align-items:baseline; gap:24px; flex-wrap:wrap; margin-top:10px; }
+.tl-content h3{ font-size:22px; color:var(--ink-0); font-weight:500; display:flex; align-items:center; gap:8px;}
+.tl-content p{ color:var(--ink-2); font-size:14px; max-width:420px; }
+
+/* ============================================================
+   HALL OF FAME — MUSIC CARDS UPDATED
+=============================================================== */
+.songs-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:22px; }
+.song-card{ padding:18px; display:flex; flex-direction:column; gap:16px; transition: transform .5s var(--ease-out), border-color .4s; }
+.song-card:hover{ transform:translateY(-6px); }
+.song-cover{
+  aspect-ratio:1/1; border-radius:14px; position:relative; overflow:hidden;
+  display:flex; align-items:center; justify-content:center; background:#120f17;
+}
+.song-cover img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.85; transition:scale .5s; }
+.song-card:hover .song-cover img{ scale:1.05; }
+.song-cover .bars{ display:flex; align-items:center; gap:4px; height:34%; z-index:2; position:relative; pointer-events:none; }
+.song-cover .bars span{ width:5px; border-radius:3px; background:rgba(255,255,255,.9); animation:wave 1.2s ease-in-out infinite; }
+.song-card:hover .bars span{ animation-play-state:running; }
+.song-cover .play-btn{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .35s;
+  background:rgba(7,6,10,.55); z-index:3;
+}
+.song-card:hover .play-btn{ opacity:1; }
+.play-circle{ width:46px;height:46px;border-radius:50%; background:var(--gold-0); display:flex; align-items:center; justify-content:center; color:#1a1206; }
+.song-meta-top{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:10px; color:var(--ink-2); letter-spacing:.06em; padding:0 4px;}
+.song-info{ padding:0 4px; }
+.song-info h4{ font-size:16.5px; color:var(--ink-0); font-weight:600; font-family:var(--body); }
+.song-info .movie{ font-size:12.5px; color:var(--gold-1); margin-top:3px; }
+.song-info .details{ font-size:11px; color:var(--ink-2); margin-top:8px; line-height:1.7; }
+.song-links{ display:flex; gap:8px; margin-top:12px; padding:0 4px; }
+.song-links a{
+  flex:1; text-align:center; padding:8px 6px; border-radius:10px; font-size:10px; font-weight:600;
+  border:1px solid var(--glass-border-soft); color:var(--ink-1); transition:.3s;
+}
+.song-links a:hover{ border-color:var(--gold-0); color:var(--gold-0); background:rgba(233,195,115,.06); }
+
+/* ============================================================
+   DISCOGRAPHY
+=============================================================== */
+.disc-tabs{ display:flex; gap:10px; margin-bottom:40px; flex-wrap:wrap; }
+.disc-tab{ padding:10px 22px; border-radius:100px; font-size:12.5px; font-weight:600; border:1px solid var(--glass-border-soft); color:var(--ink-2); transition:.3s; }
+.disc-tab.active, .disc-tab:hover{ color:#1a1206; background:var(--gold-0); border-color:var(--gold-0); }
+.movie-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:18px; }
+.movie-card{ display:none; }
+.movie-card.show{ display:block; }
+.movie-poster{
+  aspect-ratio:2/3; border-radius:16px; position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:16px;
+  border:1px solid var(--glass-border-soft); transition:transform .5s var(--ease-out), border-color .4s;
+  background:#14111a;
+}
+.movie-poster img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.movie-poster:hover{ transform:translateY(-6px) scale(1.015); border-color:rgba(233,195,115,.35); }
+.movie-poster .title{ font-family:var(--display); font-size:17px; color:var(--ink-0); line-height:1.2; }
+.movie-poster .yr{ font-family:var(--mono); font-size:10px; color:var(--gold-0); margin-top:5px; }
+.movie-poster::before{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(7,6,10,.92), rgba(7,6,10,.2) 60%); z-index:1;}
+.movie-poster .mtxt{ position:relative; z-index:2; }
+.movie-poster .glyph{ position:absolute; top:16px; right:16px; color:var(--gold-0); z-index:2; display:flex; align-items:center; justify-content:center;}
+
+/* ============================================================
+   AWARDS
+=============================================================== */
+.awards-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:22px; }
+.award-card{ padding:34px 28px; text-align:left; }
+.award-num{ font-family:var(--display); font-size:54px; color:var(--gold-0); line-height:1; }
+.award-card h4{ margin-top:14px; font-size:14.5px; color:var(--ink-0); font-weight:600; }
+.award-card p{ margin-top:6px; font-size:12.5px; color:var(--ink-2); }
+/* ============================================================
+   COLLABORATIONS (MUSIC ICON UPDATED)
+=============================================================== */
+.collab-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:20px; }
+.collab-card{ display:flex; flex-direction:column; align-items:center; text-align:center; padding:26px 14px; gap:14px; transition: transform .4s var(--ease-out); }
+.collab-card:hover{ transform:translateY(-5px); }
+.collab-avatar{
+  width:74px;height:74px;border-radius:50%; position:relative; display:flex; align-items:center; justify-content:center;
+  color:var(--gold-0);
+  background:linear-gradient(135deg,#241a10,#0c0907); border:1px solid var(--glass-border);
+}
+.collab-avatar::after{ content:""; position:absolute; inset:-4px; border-radius:50%; border:1px solid transparent; transition:border-color .4s; }
+.collab-card:hover .collab-avatar::after{ border-color:var(--gold-0); }
+.collab-card h5{ font-size:13.5px; color:var(--ink-0); font-weight:600; }
+.collab-card span{ font-size:10.5px; color:var(--ink-2); font-family:var(--mono); }
+
+/* ============================================================
+   STATS
+=============================================================== */
+.stats-dash{ display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--glass-border-soft); border-radius:22px; overflow:hidden; border:1px solid var(--glass-border-soft); }
+@media(max-width:900px){ .stats-dash{ grid-template-columns:repeat(2,1fr); } }
+.stat-cell{ background:var(--bg-1); padding:42px 24px; text-align:center; }
+.stat-num{ font-family:var(--display); font-size:clamp(32px,4vw,46px); color:var(--gold-0); }
+.stat-label{ margin-top:8px; font-size:11.5px; color:var(--ink-2); letter-spacing:.03em; }
+
+/* ============================================================
+   GALLERY MASONRY UPDATED WITH IMAGE FRAMES & MUSIC ICONS
+=============================================================== */
+.gallery-masonry{ columns:4 220px; column-gap:16px; }
+@media(max-width:700px){ .gallery-masonry{ columns:2 150px; } }
+.g-item{ break-inside:avoid; margin-bottom:16px; border-radius:16px; overflow:hidden; position:relative; cursor:pointer; border:1px solid var(--glass-border-soft); background:#120f17;}
+.g-item .g-art{ width:100%; display:block; position:relative; overflow:hidden;}
+.g-item .g-art img{ width:100%; height:100%; object-fit:cover; display:block; transition:scale .5s var(--ease-out);}
+.g-item:hover .g-art img{ scale:1.08; }
+.g-item .g-overlay{ position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:space-between; padding:14px; opacity:0; background:linear-gradient(0deg,rgba(7,6,10,.85),transparent 60%); transition:opacity .35s; }
+.g-item:hover .g-overlay{ opacity:1; }
+.g-overlay span{ font-family:var(--mono); font-size:10px; color:var(--gold-0); letter-spacing:.08em; display:flex; align-items:center; gap:6px; }
+
+.lightbox{ position:fixed; inset:0; z-index:5000; background:rgba(5,4,7,.94); backdrop-filter:blur(14px); display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transition:opacity .4s,visibility .4s; }
+.lightbox.open{ opacity:1; visibility:visible; }
+.lightbox-inner{ width:min(90vw,560px); aspect-ratio:4/5; border-radius:20px; overflow:hidden; transform:scale(.92); transition:transform .4s var(--ease-out); border:1px solid var(--glass-border); position:relative; }
+.lightbox-inner img{ width:100%; height:100%; object-fit:cover; }
+.lightbox.open .lightbox-inner{ transform:scale(1); }
+.lightbox-close{ position:absolute; top:34px; right:5vw; font-family:var(--mono); font-size:12px; letter-spacing:.15em; color:var(--ink-1); cursor:pointer;}
+
+/* ============================================================
+   SOCIALS
+=============================================================== */
+.social-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:18px; }
+.social-card{ padding:26px; display:flex; align-items:center; justify-content:space-between; transition:transform .4s var(--ease-out); }
+.social-card:hover{ transform:translateY(-5px); border-color:rgba(233,195,115,.3); }
+.social-card .lbl{ font-size:14.5px; font-weight:600; color:var(--ink-0); }
+.social-card .sub{ font-size:10.5px; color:var(--ink-2); font-family:var(--mono); margin-top:4px; }
+.social-arrow{ width:34px;height:34px;border-radius:50%; border:1px solid var(--glass-border); display:flex; align-items:center; justify-content:center; transition:.35s; }
+.social-card:hover .social-arrow{ background:var(--gold-0); border-color:var(--gold-0); color:#1a1206; transform:rotate(45deg); }
+
+/* ============================================================
+   FOOTER
+=============================================================== */
+footer{ position:relative; z-index:2; padding:90px 0 40px; }
+.footer-glass{ padding:54px 44px; }
+.footer-top{ display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; padding-bottom:40px; border-bottom:1px solid var(--glass-border-soft); }
+.footer-logo{ font-family:var(--display); font-size:28px; letter-spacing:.1em; color:var(--ink-0); }
+.footer-tagline{ margin-top:10px; font-size:13px; color:var(--ink-2); max-width:320px; line-height:1.7; }
+.footer-social{ display:flex; gap:12px; align-items:flex-start; }
+.footer-social a{ width:38px;height:38px; border-radius:50%; border:1px solid var(--glass-border); display:flex; align-items:center; justify-content:center; font-size:13px; color:var(--ink-1); transition:.3s; }
+.footer-social a:hover{ border-color:var(--gold-0); color:var(--gold-0); }
+.footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:28px; flex-wrap:wrap; gap:16px; }
+.footer-bottom p{ font-size:11.5px; color:var(--ink-2); line-height:1.8; }
+.footer-credit{ font-family:var(--mono); font-size:10.5px; color:var(--ink-2); letter-spacing:.04em; }
+.footer-credit b{ color:var(--gold-1); }
+#back-to-top{
+  width:48px;height:48px;border-radius:50%; display:flex; align-items:center; justify-content:center;
+  position:fixed; right:28px; bottom:28px; z-index:500; opacity:0; pointer-events:none; transform:translateY(10px);
+  transition:opacity .4s, transform .4s; color:var(--ink-0);
+}
+#back-to-top.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
+
+/* ============================================================
+   MISC
+=============================================================== */
+.kicker-divider{ display:flex; align-items:center; gap:14px; margin:0 0 18px; }
+.split-anim span{ display:inline-block; }
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:.001s !important; transition-duration:.001s !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="bg-orb one"></div>
+<div class="bg-orb two"></div>
+<div class="mouse-glow" id="mouseGlow"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div id="scroll-progress"></div>
+
+<div id="loader">
+  <div class="loader-wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="loader-mark">Anirudh Ravichander</div>
+  <div class="loader-pct" id="loaderPct">0%</div>
+</div>
+
+<!-- NAV -->
+<nav class="nav-shell" id="navShell">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">ANIRUDH</a>
+    <div class="nav-links" id="navLinks">
+      <div class="nav-pill-bg" id="navPill"></div>
+      <a href="#home" class="nav-link active" data-target="home">Home</a>
+      <a href="#about" class="nav-link" data-target="about">About</a>
+      <a href="#hof" class="nav-link" data-target="hof">Hall&nbsp;of&nbsp;Fame</a>
+      <a href="#discography" class="nav-link" data-target="discography">Discography</a>
+      <a href="#awards" class="nav-link" data-target="awards">Awards</a>
+      <a href="#collab" class="nav-link" data-target="collab">Collaborations</a>
+      <a href="#gallery" class="nav-link" data-target="gallery">Gallery</a>
+      <a href="#timeline" class="nav-link" data-target="timeline">Timeline</a>
+      <a href="#socials" class="nav-link" data-target="socials">Socials</a>
+    </div>
+    <a href="#hof" class="nav-cta">Listen Now</a>
+    <button class="nav-burger" id="navBurger"><span></span></button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="navMobile">
+  <div class="nav-mobile-close" id="navMobileClose">CLOSE ✕</div>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#hof">Hall of Fame</a>
+  <a href="#discography">Discography</a>
+  <a href="#awards">Awards</a>
+  <a href="#collab">Collaborations</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#socials">Socials</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-kicker"><div class="eq"><span></span><span></span><span></span></div> COMPOSER &middot; PRODUCER &middot; PERFORMER</div>
+      <h1>
+        <span class="line"><span class="line-inner">ANIRUDH</span></span>
+        <span class="line"><span class="line-inner"><em>RAVICHANDER</em></span></span>
+      </h1>
+      <p class="hero-sub">“<span class="accent">The Sound Behind Modern Indian Cinema</span>” — a generation's heartbeat, set to music.</p>
+      <p class="hero-bio reveal">Anirudh Ravichander is a Chennai-born composer, singer and music producer whose work has redefined the sound of Tamil cinema and travelled far beyond it. From the viral phenomenon of "Why This Kolaveri Di" in 2012 to the seismic, genre-bending scores of "Master," "Beast," "Jailer," and "Leo," his music blends folk textures, electronic production and orchestral scale into something instantly recognisable as his own. Over a decade-plus career he has scored some of the biggest blockbusters in Indian cinema, working alongside its most iconic stars and directors.</p>
+      <div class="hero-actions">
+        <a href="#hof" class="btn btn-gold ripple-host">Explore The Music</a>
+        <a href="#about" class="btn btn-ghost ripple-host">His Story ↓</a>
+      </div>
+    </div>
+    <!-- HERO PORTRAIT UPDATED WITH IMAGE FRAME -->
+    <div class="hero-portrait" id="heroPortrait">
+      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop" alt="Anirudh Ravichander">
+      <div class="hero-portrait-art"></div>
+      <div class="hero-portrait-rings">
+        <svg viewBox="0 0 400 400"><circle cx="200" cy="200" r="180" fill="none" stroke="#e9c373" stroke-width="0.6" stroke-dasharray="2 10"/><circle cx="200" cy="200" r="140" fill="none" stroke="#e9c373" stroke-width="0.4" stroke-dasharray="1 6"/></svg>
+      </div>
+      <div class="hero-portrait-frame"></div>
+      <div class="hero-portrait-mono">
+        <div><div class="role">Est. 2011 — Chennai</div></div>
+        <div style="display:flex;gap:3px;align-items:flex-end;height:24px;">
+          <span style="width:4px;height:40%;background:#e9c373;border-radius:2px;animation:wave 1s ease-in-out infinite;"></span>
+          <span style="width:4px;height:90%;background:#e9c373;border-radius:2px;animation:wave 1s ease-in-out infinite -.3s;"></span>
+          <span style="width:4px;height:60%;background:#e9c373;border-radius:2px;animation:wave 1s ease-in-out infinite -.6s;"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="line"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">01 — Biography</div>
+    <div class="section-head">
+      <h2 class="reveal">A composer who became <em>a generation's</em> sound.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="glass about-quote reveal">
+        <p>"Music isn't background — it's the emotion the audience didn't know they needed yet."</p>
+        <div class="sig">— ANIRUDH RAVICHANDER</div>
+      </div>
+      <div class="about-list">
+        <div class="about-row reveal"><div class="k">Birth</div><div class="v">Born <b>16 August 1990</b> in Chennai, Tamil Nadu, into a family deeply rooted in Carnatic music tradition.</div></div>
+        <div class="about-row reveal"><div class="k">Family</div><div class="v">Grandson of veteran composer <b>R. Vaidyanathan</b>; grew up surrounded by classical training and film-music heritage.</div></div>
+        <div class="about-row reveal"><div class="k">Education</div><div class="v">Studied at <b>Padma Seshadri Bala Bhavan</b>, Chennai, before pursuing formal training in sound engineering and music production.</div></div>
+        <div class="about-row reveal"><div class="k">Profession</div><div class="v">Film composer, playback singer, music producer and live performer — one of the most in-demand voices in contemporary Indian cinema.</div></div>
+        <div class="about-row reveal"><div class="k">Journey</div><div class="v">Began as an assistant to composer <b>Harris Jayaraj</b>, absorbing the discipline of large-scale film scoring before striking out independently.</div></div>
+        <div class="about-row reveal"><div class="k">Breakthrough</div><div class="v">The 2012 single <b>"Why This Kolaveri Di"</b> became a cultural phenomenon overnight, announcing a singular new voice in Indian pop.</div></div>
+        <div class="about-row reveal"><div class="k">Style</div><div class="v">A signature fusion of <b>folk percussion, electronic synthesis and orchestral grandeur</b> — equally at home in a stadium anthem or an intimate ballad.</div></div>
+        <div class="about-row reveal"><div class="k">Achievements</div><div class="v">Multiple <b>Filmfare, SIIMA and Vijay Awards</b>, sold-out world tours, and a discography that defines the modern sound of Tamil, Telugu and Hindi cinema.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="eyebrow">02 — Career Timeline</div>
+    <div class="section-head"><h2 class="reveal">Fourteen years, <em>one signature sound.</em></h2></div>
+    <div class="timeline-track">
+      <div class="timeline-spine"></div>
+      <div class="timeline-spine-fill" id="spineFill"></div>
+      <div id="timelineItems"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HALL OF FAME -->
+<section id="hof">
+  <div class="wrap">
+    <div class="eyebrow">03 — Hall of Fame</div>
+    <div class="section-head"><h2 class="reveal">The songs that <em>defined eras.</em></h2><p class="reveal">A curated library of his most iconic, era-defining tracks across languages and decades.</p></div>
+    <div class="songs-grid" id="songsGrid"></div>
+  </div>
+</section>
+
+<!-- DISCOGRAPHY -->
+<section id="discography">
+  <div class="wrap">
+    <div class="eyebrow">04 — Discography</div>
+    <div class="section-head"><h2 class="reveal">A filmography across <em>three industries.</em></h2></div>
+    <div class="disc-tabs">
+      <button class="disc-tab active" data-lang="all">All</button>
+      <button class="disc-tab" data-lang="tamil">Tamil</button>
+      <button class="disc-tab" data-lang="telugu">Telugu</button>
+      <button class="disc-tab" data-lang="hindi">Hindi</button>
+    </div>
+    <div class="movie-grid" id="movieGrid"></div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="wrap">
+    <div class="eyebrow">05 — Recognition</div>
+    <div class="section-head"><h2 class="reveal">Decorated by <em>peers & critics alike.</em></h2></div>
+    <div class="awards-grid" id="awardsGrid"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="stats-dash" id="statsDash">
+      <div class="stat-cell"><div class="stat-num" data-count="35" data-suffix="+">0</div><div class="stat-label">Awards Won</div></div>
+      <div class="stat-cell"><div class="stat-num" data-count="100" data-suffix="+">0</div><div class="stat-label">Songs Composed</div></div>
+      <div class="stat-cell"><div class="stat-num" data-count="30" data-suffix="+">0</div><div class="stat-label">Films Scored</div></div>
+      <div class="stat-cell"><div class="stat-num" data-count="14" data-suffix="+">0</div><div class="stat-label">Years in Industry</div></div>
+      <div class="stat-cell"><div class="stat-num" data-count="50" data-suffix="M+">0</div><div class="stat-label">Fans Worldwide</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLABORATIONS -->
+<section id="collab">
+  <div class="wrap">
+    <div class="eyebrow">06 — Legendary Collaborations</div>
+    <div class="section-head"><h2 class="reveal">The stars he's <em>scored for.</em></h2></div>
+    <div class="collab-grid" id="collabGrid"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="eyebrow">07 — Gallery</div>
+    <div class="section-head"><h2 class="reveal">Moments, <em>captured live.</em></h2></div>
+    <div class="gallery-masonry" id="galleryGrid"></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-close" id="lightboxClose">CLOSE ✕</div>
+  <div class="lightbox-inner" id="lightboxInner"></div>
+</div>
+
+<!-- SOCIALS -->
+<section id="socials">
+  <div class="wrap">
+    <div class="eyebrow">08 — Connect</div>
+    <div class="section-head"><h2 class="reveal">Follow the <em>sound.</em></h2></div>
+    <div class="social-grid" id="socialGrid"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="glass footer-glass">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">ANIRUDH</div>
+          <p class="footer-tagline">An unofficial fan tribute dedicated to the music and legacy of Anirudh Ravichander.</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.youtube.com" target="_blank" rel="noopener">YT</a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener">IG</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener">X</a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener">FB</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 All Rights Reserved.<br>This website is an unofficial fan tribute dedicated to Anirudh Ravichander.</p>
+        <p class="footer-credit">Designed &amp; Developed by <b>V7KEYSTUDIO</b><br>Founder: Anurag S. Yadav</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="glass" aria-label="Back to top">↑</button>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+/* ============================================================
+   DATA
+=============================================================== */
+
+const TIMELINE = [
+  { y: "2012", t: "Why This Kolaveri Di", d: "The song that became a global internet phenomenon and introduced Anirudh to the world." },
+  { y: "2014", t: "Kaththi", d: "A breakthrough collaboration with Thalapathy Vijay featuring the blockbuster album including Selfie Pulla." },
+  { y: "2015", t: "Maari", d: "Delivered the cult hit Don'u Don'u Don'u and strengthened his partnership with Dhanush." },
+  { y: "2019", t: "Petta", d: "His first collaboration with Superstar Rajinikanth, creating one of the year's most celebrated soundtracks." },
+  { y: "2021", t: "Master", d: "Vaathi Coming and Kutti Story became massive youth anthems across India." },
+  { y: "2022", t: "Beast", d: "Arabic Kuthu became one of the biggest South Indian songs ever released." },
+  { y: "2022", t: "Vikram", d: "A powerful background score for Lokesh Kanagaraj's blockbuster action thriller." },
+  { y: "2023", t: "Jawan", d: "Bollywood debut as a full composer alongside Shah Rukh Khan featuring Chaleya." },
+  { y: "2023", t: "Leo", d: "Created an intense and stylish soundtrack featuring Naa Ready and Badass." },
+  { y: "2023", t: "Jailer", d: "Hukum became one of the biggest mass anthem songs in Indian cinema." },
+  { y: "2024", t: "Devara", d: "Expanded his pan-India success with Jr. NTR in a blockbuster Telugu film." },
+  { y: "2025", t: "Coolie", d: "Another grand collaboration with Superstar Rajinikanth generating huge anticipation." },
+  { y: "2026", t: "Jana Nayagan", d: "One of the most awaited musical projects of his career." }
+];
+
+/* SONGS ARRAY WITH IMAGE URLS INSTEAD OF ALPHABETS */
+const SONGS = [
+  { n:"Why This Kolaveri Di", m:"3", y:"2012", l:"Tamil", s:"Dhanush", img:"https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop" },
+  { n:"Selfie Pulla", m:"Kaththi", y:"2014", l:"Tamil", s:"Vijay & Sunidhi Chauhan", img:"https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=600&auto=format&fit=crop" },
+  { n:"Aaluma Doluma", m:"Vedalam", y:"2015", l:"Tamil", s:"Anirudh", img:"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop" },
+  { n:"Don'u Don'u Don'u", m:"Maari", y:"2015", l:"Tamil", s:"Anirudh & Alisha Thomas", img:"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" },
+  { n:"Vaathi Coming", m:"Master", y:"2021", l:"Tamil", s:"Gana Balachandar", img:"https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=600&auto=format&fit=crop" },
+  { n:"Kutti Story", m:"Master", y:"2021", l:"Tamil", s:"Vijay", img:"https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop" },
+  { n:"Arabic Kuthu", m:"Beast", y:"2022", l:"Tamil", s:"Anirudh & Jonita Gandhi", img:"https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=600&auto=format&fit=crop" },
+  { n:"Jolly O Gymkhana", m:"Beast", y:"2022", l:"Tamil", s:"Vijay", img:"https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=600&auto=format&fit=crop" },
+  { n:"Pathala Pathala", m:"Vikram", y:"2022", l:"Tamil", s:"Kamal Haasan & Anirudh", img:"https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=600&auto=format&fit=crop" },
+  { n:"Hukum", m:"Jailer", y:"2023", l:"Tamil", s:"Anirudh", img:"https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop" },
+  { n:"Badass", m:"Leo", y:"2023", l:"Tamil", s:"Anirudh", img:"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" },
+  { n:"Naa Ready", m:"Leo", y:"2023", l:"Tamil", s:"Vijay & Anirudh", img:"https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=600&auto=format&fit=crop" },
+  { n:"Chaleya", m:"Jawan", y:"2023", l:"Hindi", s:"Arijit Singh & Shilpa Rao", img:"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop" },
+  { n:"Fear Song", m:"Devara", y:"2024", l:"Telugu", s:"Anirudh", img:"https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=600&auto=format&fit=crop" },
+  { n:"Dheema", m:"Love Insurance Kompany", y:"2025", l:"Tamil", s:"Anirudh", img:"https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=600&auto=format&fit=crop" }
+];
+
+const MOVIES = {
+  tamil: ["3", "Kaththi", "Maari", "Vedalam", "Petta", "Master", "Doctor", "Beast", "Vikram", "Jailer", "Leo", "Coolie"],
+  telugu: ["Jersey", "Gang Leader", "Devara"],
+  hindi: ["Jawan"]
+};
+
+const AWARDS = [
+  { n:2, t:"Filmfare Awards South", d:"Best Music Director" },
+  { n:10, t:"SIIMA Awards", d:"Multiple Wins" },
+  { n:6, t:"Edison Awards", d:"Best Music Composer" },
+  { n:5, t:"Vijay Awards", d:"Favourite Music Director" },
+  { n:1, t:"Kalaimamani", d:"Government of Tamil Nadu" }
+];
+
+const COLLAB = [
+  "Thalapathy Vijay", "Rajinikanth", "Shah Rukh Khan", "Dhanush", "Ajith Kumar", 
+  "Kamal Haasan", "Jr NTR", "Sivakarthikeyan", "Nani", "Samantha", 
+  "Nayanthara", "Lokesh Kanagaraj", "Nelson Dilipkumar", "Atlee", "A.R. Murugadoss"
+];
+
+const SOCIALS = [
+  {n:'YouTube',s:'Music Videos & Vlogs',u:'https://www.youtube.com'},
+  {n:'Spotify',s:'Stream the Discography',u:'https://www.spotify.com'},
+  {n:'Apple Music',s:'Full Catalogue',u:'https://music.apple.com'},
+  {n:'Instagram',s:'Behind the Scenes',u:'https://www.instagram.com'},
+  {n:'X (Twitter)',s:'Latest Updates',u:'https://twitter.com'},
+  {n:'Facebook',s:'Official Page',u:'https://www.facebook.com'},
+  {n:'Wikipedia',s:'Full Biography',u:'https://en.wikipedia.org'},
+];
+
+/* SVG MUSIC ICON REUSABLE COMPONENT */
+const MUSIC_ICON_SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>`;
+const MUSIC_DISC_SVG = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 0 1 10 10"/></svg>`;
+
+/* ============================================================
+   RENDER FUNCTIONS
+=============================================================== */
+function renderTimeline(){
+  const el = document.getElementById('timelineItems');
+  el.innerHTML = TIMELINE.map(it=>`
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-year">${it.y}</div>
+      <div class="tl-content">
+        <h3>${MUSIC_ICON_SVG} ${it.t}</h3>
+        <p>${it.d}</p>
+      </div>
+    </div>`).join('');
+}
+
+function renderSongs(){
+  const el = document.getElementById('songsGrid');
+  el.innerHTML = SONGS.map(s=>`
+    <div class="song-card glass reveal">
+      <div class="song-cover">
+        <img src="${s.img}" alt="${s.n}">
+        <div class="bars">
+          <span style="height:30%;animation-delay:-1s"></span>
+          <span style="height:80%;animation-delay:-.7s"></span>
+          <span style="height:50%;animation-delay:-.4s"></span>
+          <span style="height:95%;animation-delay:-.2s"></span>
+          <span style="height:40%;animation-delay:-.9s"></span>
+        </div>
+        <div class="play-btn"><div class="play-circle">▶</div></div>
+      </div>
+      <div class="song-meta-top"><span>${s.l}</span><span>${s.y}</span></div>
+      <div class="song-info">
+        <h4>${s.n}</h4>
+        <div class="movie">${s.m}</div>
+        <div class="details">Composer: Anirudh Ravichander<br>Singer: ${s.s}</div>
+      </div>
+      <div class="song-links">
+        <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(s.n+' '+s.m)}" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://open.spotify.com/search/${encodeURIComponent(s.n)}" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://music.apple.com/search?term=${encodeURIComponent(s.n)}" target="_blank" rel="noopener">Apple</a>
+      </div>
+    </div>`).join('');
+}
+
+function renderMovies(){
+  const el = document.getElementById('movieGrid');
+  let html = '';
+  const movieImages = [
+    "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=500&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=500&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=500&auto=format&fit=crop"
+  ];
+  
+  Object.keys(MOVIES).forEach(lang=>{
+    MOVIES[lang].forEach((title,i)=>{
+      const imgUrl = movieImages[i % movieImages.length];
+      html += `<div class="movie-card show" data-lang="${lang}">
+        <div class="movie-poster">
+          <img src="${imgUrl}" alt="${title}">
+          <div class="glyph">${MUSIC_ICON_SVG}</div>
+          <div class="mtxt"><div class="title">${title}</div><div class="yr">${lang.charAt(0).toUpperCase()+lang.slice(1)}</div></div>
+        </div>
+      </div>`;
+    });
+  });
+  el.innerHTML = html;
+}
+
+function renderAwards(){
+  const el = document.getElementById('awardsGrid');
+  el.innerHTML = AWARDS.map(a=>`
+    <div class="award-card glass reveal">
+      <div class="award-num" data-count="${a.n}">0</div>
+      <h4>${a.t}</h4><p>${a.d}</p>
+    </div>`).join('');
+}
+
+function renderCollab(){
+  const el = document.getElementById('collabGrid');
+  el.innerHTML = COLLAB.map(name=>{
+    return `<div class="collab-card glass reveal">
+      <div class="collab-avatar">${MUSIC_DISC_SVG}</div>
+      <h5>${name}</h5><span>Collaborator</span>
+    </div>`;
+  }).join('');
+}
+
+function renderGallery(){
+  const el = document.getElementById('galleryGrid');
+  const galleryImages = [
+    "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=600&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=600&auto=format&fit=crop"
+  ];
+  
+  const heights = [240,300,200,340,260,220,310,250];
+  el.innerHTML = heights.map((h,i)=>`
+    <div class="g-item reveal" data-idx="${i}">
+      <div class="g-art" style="height:${h}px;">
+        <img src="${galleryImages[i % galleryImages.length]}" alt="Gallery image ${i+1}">
+      </div>
+      <div class="g-overlay">
+        <span>${MUSIC_ICON_SVG} FRAME ${String(i+1).padStart(2,'0')}</span>
+      </div>
+    </div>`).join('');
+}
+
+function renderSocials(){
+  const el = document.getElementById('socialGrid');
+  el.innerHTML = SOCIALS.map(s=>`
+    <a href="${s.u}" target="_blank" rel="noopener" class="social-card glass">
+      <div><div class="lbl">${s.n}</div><div class="sub">${s.s}</div></div>
+      <div class="social-arrow">→</div>
+    </a>`).join('');
+}
+
+renderTimeline(); renderSongs(); renderMovies(); renderAwards(); renderCollab(); renderGallery(); renderSocials();
+/* ============================================================
+   LOADER & SCRIPTS INITIALIZATION
+=============================================================== */
+window.addEventListener('load', ()=>{
+  let pct = 0;
+  const pctEl = document.getElementById('loaderPct');
+  const iv = setInterval(()=>{
+    pct += Math.random()*18;
+    if(pct>=100){ pct=100; clearInterval(iv); }
+    pctEl.textContent = Math.floor(pct)+'%';
+    if(pct===100){
+      setTimeout(()=>{
+        document.getElementById('loader').classList.add('hidden');
+        document.body.style.cursor='none';
+        heroEntrance();
+      }, 250);
+    }
+  }, 110);
+});
+
+/* CUSTOM CURSOR */
+const dot = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+const glow = document.getElementById('mouseGlow');
+let mx=0,my=0, rx=0, ry=0;
+window.addEventListener('mousemove', e=>{
+  mx=e.clientX; my=e.clientY;
+  dot.style.left=mx+'px'; dot.style.top=my+'px';
+  glow.style.left=mx+'px'; glow.style.top=my+'px';
+});
+function ringLoop(){ rx += (mx-rx)*0.18; ry += (my-ry)*0.18; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(ringLoop); }
+ringLoop();
+document.querySelectorAll('a,button,.song-card,.g-item,.collab-card').forEach(el=>{
+  el.addEventListener('mouseenter', ()=>ring.classList.add('is-active'));
+  el.addEventListener('mouseleave', ()=>ring.classList.remove('is-active'));
+});
+
+/* BUTTON RIPPLE */
+document.querySelectorAll('.btn, .nav-cta').forEach(btn=>{
+  btn.style.position='relative'; btn.style.overflow='hidden';
+  btn.addEventListener('click', function(e){
+    const r = document.createElement('span');
+    r.className='ripple';
+    const rect = this.getBoundingClientRect();
+    r.style.left=(e.clientX-rect.left)+'px'; r.style.top=(e.clientY-rect.top)+'px';
+    r.style.width=r.style.height='14px';
+    this.appendChild(r);
+    setTimeout(()=>r.remove(),650);
+  });
+});
+
+/* LENIS SMOOTH SCROLL */
+const lenis = new Lenis({ duration:1.1, easing:(t)=>1-Math.pow(1-t,3), smoothWheel:true });
+function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+requestAnimationFrame(raf);
+lenis.on('scroll', ()=>{ if(window.ScrollTrigger) ScrollTrigger.update(); });
+
+gsap.registerPlugin(ScrollTrigger);
+
+/* NAV BEHAVIOR */
+const navShell = document.getElementById('navShell');
+let lastY = 0;
+lenis.on('scroll', (e)=>{
+  const y = e.scroll;
+  document.getElementById('scroll-progress').style.width = (y/(document.body.scrollHeight-window.innerHeight)*100)+'%';
+  if(y > lastY && y > 200){ navShell.classList.add('nav-hidden'); } else { navShell.classList.remove('nav-hidden'); }
+  lastY = y;
+  document.getElementById('back-to-top').classList.toggle('show', y>900);
+});
+
+const navLinks = document.querySelectorAll('.nav-link');
+const navPill = document.getElementById('navPill');
+function movePill(link){
+  if(!link) return;
+  navPill.style.left = link.offsetLeft+'px';
+  navPill.style.width = link.offsetWidth+'px';
+}
+movePill(navLinks[0]);
+navLinks.forEach(link=>{ link.addEventListener('mouseenter', ()=>movePill(link)); });
+document.getElementById('navLinks').addEventListener('mouseleave', ()=>{
+  const active = document.querySelector('.nav-link.active'); movePill(active);
+});
+navLinks.forEach(link=>{
+  link.addEventListener('click', (e)=>{
+    e.preventDefault();
+    navLinks.forEach(l=>l.classList.remove('active'));
+    link.classList.add('active'); movePill(link);
+    lenis.scrollTo(document.getElementById(link.dataset.target), {offset:-90});
+  });
+});
+
+const sections = document.querySelectorAll('section[id]');
+ScrollTrigger.batch(sections, {
+  onEnter: batch => batch.forEach(sec=>{
+    const link = document.querySelector(`.nav-link[data-target="${sec.id}"]`);
+    if(link){
+      ScrollTrigger.create({
+        trigger: sec, start:'top center', end:'bottom center',
+        onToggle: self => { if(self.isActive){ navLinks.forEach(l=>l.classList.remove('active')); link.classList.add('active'); movePill(link); } }
+      });
+    }
+  })
+});
+
+/* MOBILE NAV */
+const navMobile = document.getElementById('navMobile');
+document.getElementById('navBurger').addEventListener('click', ()=>navMobile.classList.add('open'));
+document.getElementById('navMobileClose').addEventListener('click', ()=>navMobile.classList.remove('open'));
+navMobile.querySelectorAll('a').forEach(a=>a.addEventListener('click', e=>{
+  e.preventDefault(); navMobile.classList.remove('open');
+  lenis.scrollTo(document.querySelector(a.getAttribute('href')), {offset:-90});
+}));
+
+/* HERO ENTRANCE */
+function heroEntrance(){
+  const tl = gsap.timeline({defaults:{ease:'power4.out'}});
+  tl.from('.hero-kicker', {opacity:0,y:14,duration:.8})
+    .from('.hero h1 .line-inner', {yPercent:120, duration:1.1, stagger:.12}, '-=.5')
+    .from('.hero-sub', {opacity:0,y:14,duration:.8}, '-=.5')
+    .from('.hero-bio', {opacity:0,y:14,duration:.8}, '-=.6')
+    .from('.hero-actions .btn', {opacity:0,y:14,stagger:.1,duration:.7}, '-=.6')
+    .from('.hero-portrait', {opacity:0,scale:.92,duration:1.2}, '-=1.1')
+    .from('.hero-scroll', {opacity:0,duration:.8}, '-=.4');
+
+  const portrait = document.getElementById('heroPortrait');
+  for(let i=0;i<18;i++){
+    const p = document.createElement('div');
+    p.className='particle';
+    const size = Math.random()*4+2;
+    p.style.width=size+'px'; p.style.height=size+'px';
+    p.style.left = Math.random()*100+'%'; p.style.top = Math.random()*100+'%';
+    portrait.appendChild(p);
+    gsap.to(p, {opacity: Math.random()*.6+.2, duration:1, delay:Math.random()*2});
+    gsap.to(p, {y:'-=40', x:(Math.random()-.5)*30, duration:4+Math.random()*4, repeat:-1, yoyo:true, ease:'sine.inOut', delay:Math.random()*3});
+  }
+}
+
+const heroPortrait = document.getElementById('heroPortrait');
+document.querySelector('.hero').addEventListener('mousemove', (e)=>{
+  const px = (e.clientX/window.innerWidth - .5);
+  const py = (e.clientY/window.innerHeight - .5);
+  gsap.to(heroPortrait, {rotateY: px*6, rotateX: -py*6, duration:.6, ease:'power2.out', transformPerspective:800});
+});
+
+/* SCROLL REVEALS */
+ScrollTrigger.batch('.reveal', {
+  start:'top 88%',
+  onEnter: batch => gsap.to(batch, {opacity:1, y:0, duration:1, stagger:.08, ease:'power3.out'}),
+  once:true
+});
+
+/* TIMELINE PROGRESS */
+gsap.to('#spineFill', {
+  height:'100%', ease:'none',
+  scrollTrigger:{ trigger:'.timeline-track', start:'top 60%', end:'bottom 60%', scrub:.6 }
+});
+document.querySelectorAll('.tl-item').forEach(item=>{
+  ScrollTrigger.create({ trigger:item, start:'top 70%', onEnter:()=>item.classList.add('in-view') });
+});
+
+/* COUNTERS */
+function animateCounter(el){
+  const target = +el.dataset.count;
+  const suffix = el.dataset.suffix || '';
+  const obj = {val:0};
+  gsap.to(obj, {
+    val: target, duration:1.8, ease:'power2.out',
+    onUpdate: ()=> el.textContent = Math.floor(obj.val)+suffix
+  });
+}
+document.querySelectorAll('[data-count]').forEach(el=>{
+  ScrollTrigger.create({ trigger:el, start:'top 85%', once:true, onEnter:()=>animateCounter(el) });
+});
+
+/* DISCOGRAPHY FILTER */
+document.querySelectorAll('.disc-tab').forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    document.querySelectorAll('.disc-tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const lang = tab.dataset.lang;
+    document.querySelectorAll('.movie-card').forEach(card=>{
+      const show = lang==='all' || card.dataset.lang===lang;
+      card.style.display = show ? 'block' : 'none';
+      if(show) gsap.fromTo(card, {opacity:0,y:10}, {opacity:1,y:0,duration:.5});
+    });
+  });
+});
+
+/* GALLERY LIGHTBOX */
+const lightbox = document.getElementById('lightbox');
+const lightboxInner = document.getElementById('lightboxInner');
+document.getElementById('galleryGrid').addEventListener('click', (e)=>{
+  const item = e.target.closest('.g-item');
+  if(!item) return;
+  const imgSrc = item.querySelector('img').src;
+  lightboxInner.innerHTML = `<img src="${imgSrc}" alt="Gallery Large View">`;
+  lightbox.classList.add('open');
+});
+document.getElementById('lightboxClose').addEventListener('click', ()=>lightbox.classList.remove('open'));
+lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) lightbox.classList.remove('open'); });
+
+/* BACK TO TOP */
+document.getElementById('back-to-top').addEventListener('click', ()=>lenis.scrollTo(0));
+
+/* PARALLAX ORBS */
+gsap.to('.bg-orb.one', {y:160, scrollTrigger:{scrub:1}});
+gsap.to('.bg-orb.two', {y:-160, scrollTrigger:{scrub:1}});
+</script>
+</body>
+</html>
